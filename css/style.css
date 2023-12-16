@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --bg: #2a2d32;
+    --bg2: #1a1b1f;
+    --primary: #3762e4;
+    --secondary: #c3dafa;
+    --text: #eeeeee;
+    --red: #ffb3ba;
+    --orange: #ffdfba;
+    --yellow: #ffffba;
+    --green: #baffc9;
+    --blue: #bae1ff; 
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--text);
+    height: 100%;
+    font-family: Inter;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+nav {
+    box-sizing:border-box;
+    position: fixed;
+    margin: 0px;
+    padding: 20px;
+    width: 400px;
+    height: 100%;
+    background-color: var(--bg2);
+    overflow: hidden;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 12px 0px 26px;
+}
+
+.boards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.board {
+    box-sizing: border-box;
+    font-weight: 700;
+    display: flex;
+    border-radius: 100px;
+    justify-content: start;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    outline: 0;
+    transition: outline 2s;
+    transition: transform 0.5s;
+}
+
+.board:hover {
+    outline:1px solid var(--secondary);
+    transform: scale(1.05);
+    filter: drop-shadow(black -1rem 1rem 20px);
+}
+
+.icon {
+    font-size:18px;
+    padding: 12px;
+    margin-right: 16px;
+    border-radius: 40px;
+}
+
+.create-button {
+    svg {
+        margin-right: 16px;
+    }
+}
+
+.theme-menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position: fixed;
+    bottom:20px;
+    background-color: var(--bg);
+    padding: 4px;
+    width: 351px;
+    border-radius: 10px;
+
+    div {
+        padding: 10px 40px;
+        display: flex;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 26%;
+    }
+}
+
+.active-theme {background-color: var(--bg2);}
+
+svg {
+    path {
+        fill: var(--text);
+    }
+}
